@@ -45,7 +45,6 @@ def send_email(to_email):
 
     if not api_key:
         logging.error("POSTMARK_API_KEY environment variable is not set.")
-        
         print_extended("\n[ERROR] NO POSTMARK API KEY FOUND", "red", "bold")
         print_extended("\nSOLUTION:", "yellow", "underline")
         print_extended("\t1. Go to Postmark app { https://postmarkapp.com }, generate one for the server.", "cyan", "normal")
