@@ -53,10 +53,8 @@ def send_email(to_email):
         print_extended("\nERROR DETAILS:", "red", "underline")
         raise ValueError("Please set the POSTMARK_API_KEY environment variable in a .env file.")
 
-    
     client = PostmarkClient(server_token=api_key)
 
-    
     email_parameters = {
         "From": "sdatta@prophet.com",
         "To": to_email,
@@ -89,12 +87,6 @@ def main():
     args = parser.parse_args()
 
     send_email(args.to)
-
-    # try:
-    #     send_email(args.to)
-    # except KeyboardInterrupt:
-    #     logging.info("User interrupted the script")
-    #     print_extended("User interrupted the script", "magenta", "normal")
 
 
 
